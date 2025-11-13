@@ -1,0 +1,23 @@
+<h2>Contacto</h2>
+
+<form [formGroup]="contactoForm" (ngSubmit)="enviar()">
+
+    <!-- Nombre -->
+    <label>Nombre</label>
+    <input type="text" formControlName="nombre">
+    <small *ngif="enviado && contactoForm.controls['nombre'].invalid">
+        El Nombre es obligatorio.
+    </small>
+
+    <!-- Email -->
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <small *ngif="enviado && contactoForm.controls['email'].invalid">
+        Ingresa un Email Válido.
+    </small>
+
+    <!-- Mensaje -->
+    <label>Mensaje</label>
+    <textarea rows="5" formControlName="mensaje"></textarea>
+    <small *ngif="enviado && contactoForm.controls['mensaje']"
+</form>

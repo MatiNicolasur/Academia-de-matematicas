@@ -1,0 +1,9 @@
+<h2>Contacto</h2>
+
+<form [formGroup]="contactoForm" (ngSubmit)="enviar()">
+
+    <!-- Nombre -->
+    <label>Nombre</label>
+    <input type="text" formControlName="nombre">
+    <small *ngif="enviado && contactoForm.controls['nombre']"
+</form>

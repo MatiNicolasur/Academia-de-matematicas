@@ -1,0 +1,10 @@
+import { Routes } from '@angular/router';
+import { Contacto } from './pages/contacto/contacto';
+import { Admision } from './pages/admision/admision';
+
+export const routes: Routes = [
+    { path: 'contacto', component: Contacto },
+    { path: 'admision', component: Admision },
+    { path: '', redirectTo: 'contacto', pathMatch: 'full' }
+    { path: '', redirectTo: 'admision', pathMatch: 'full'}
+];
